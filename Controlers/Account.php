@@ -44,7 +44,8 @@ if (isset($_POST['delete']))
 			$compte= new Account($_POST);
 			$compte->hydrate($_POST);
 			$manager->update($compte);
-		  header("Location: compte.php");
+
+		  header("Location: index.php");
 
 		}
 
