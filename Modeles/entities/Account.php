@@ -37,6 +37,12 @@ $this->hydrate($data);
 
 
 
+// fonction pour ajouter de l'argent
+
+public function addMoney($money){
+  $this->money += $money;
+}
+
     /**
      * Get the value of Id
      *
@@ -105,7 +111,7 @@ $this->hydrate($data);
     public function setSOlde($solde)
     {
       $solde = (int) $solde;
-      
+
         $this->solde = $solde;
 
         return $this;
