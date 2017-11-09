@@ -8,7 +8,11 @@ class AccountManager
   private $_db;
 
 
-
+/**
+ * { function_description }
+ *
+ * @param      <type>  $db     The database
+ */
     public function __construct($db)
 
   {
@@ -24,6 +28,11 @@ class AccountManager
 
   }
 
+/**
+ * { function_description }
+ *
+ * @return     <type>  ( description_of_the_return_value )
+ */
   public function getlist()
   {
 
@@ -34,7 +43,13 @@ class AccountManager
   return $accounts;
   }
 
-
+/**
+ * { function_description }
+ *
+ * @param      <type>   $id     The identifier
+ *
+ * @return     Account  ( description_of_the_return_value )
+ */
   public function get($id){
     $req= $this->_db->prepare('SELECT * FROM Account WHERE id = :id');
     $req->execute(array (
@@ -45,7 +60,11 @@ class AccountManager
     return new Account($accounts);
   }
 
-
+/**
+ * { function_description }
+ *
+ * @param      <type>  $accounts  The accounts
+ */
   public function add($accounts){
 
 
@@ -59,10 +78,14 @@ class AccountManager
 }
 
 
-
+/**
+ * { function_description }
+ *
+ * @param      <type>  $accounts  The accounts
+ */
   public function update($accounts){
     $req = $this->_db->prepare('UPDATE Account SET name = :name, solde = :solde WHERE id = :id');
-    var_dump($req);
+
 
 
     $req->bindValue(':name', $accounts->getName());
@@ -75,7 +98,11 @@ class AccountManager
     $req->execute();
 
 }
-
+/**
+ * { function_description }
+ *
+ * @param      <type>  $accounts  The accounts
+ */
   public function delete($accounts)
   {
     $req = $this->_db->prepare('DELETE FROM Account WHERE id = :id');

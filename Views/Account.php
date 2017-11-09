@@ -17,8 +17,8 @@ foreach ($accounts as $key => $value) {
   <div class="col-sm-4 my-2 ">
     <div class="card">
       <div class="card-block">
-      <!--   <h3 class="card-title"><?php echo $value['mark'] ?></h3> -->
-        <p class="card-text">name:<?php echo $value['name'] ?></p>
+
+        <p class="card-text">name:<?php echo $value->getName(); ?></p>
         <p class="card-text">solde:<?php echo $value['solde'] ?></p>
 
 

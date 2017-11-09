@@ -60,7 +60,8 @@
 
                 <div class="modal-footer">
                   <button type="button " class=" btn close " data-dismiss="modal">Close</button>
-                  <input type="submit" name"submitAdd" class="btn btn-danger env"  value="Envoyer">
+
+                  <input type="submit" name="submitAdd" class="btn btn-danger env"  value="Envoyer">
                 </div>
 
               </form>

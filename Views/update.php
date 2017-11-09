@@ -10,18 +10,12 @@
 
             <form class="form-register" method="post" name="" action="index.php" >
 <!-- id -->
-  <!-- <div class="form-group row">
-     <label for="example-text-input" class="col-2 col-form-label">id</label>
-     <div class="col-10">
-       <input class="form-control" type="number" name="id" value= '<?php echo $account->getId() ?>' required>
-     </div>
- </div> -->
 
 <!-- Name -->
  <div class="form-group row">
      <label for="example-text-input" class="col-2 col-form-label">Name</label>
      <div class="col-10">
-     <input class="form-control" type="text" name="name" value= '<?php echo $account->getName() ?>' required>
+     <input class="form-control" type="text" name="name" value= '<?php echo $account->getName(); ?>' required>
      </div>
  </div>
 
@@ -29,12 +23,12 @@
  <div class="form-group row">
      <label for="example-text-input" class="col-2 col-form-label">Solde</label>
      <div class="col-10">
-     <input class="form-control" type="number" name="solde" value= '<?php echo $account->getsolde() ?>' required>
+     <input class="form-control" type="number" name="solde" value= '<?php echo $account->getSolde(); ?>' required>
      </div>
  </div>
 
 
-               <input type="hidden" name="type" value='<?php echo $account->getId() ?>'>
+               <input type="hidden" name="id" value='<?php echo $account->getId(); ?>'>
                  <input class="btn btn-primary env" type="submit" name="submit" value="Envoyer" >
 
                </div>
