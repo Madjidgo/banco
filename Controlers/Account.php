@@ -44,7 +44,7 @@ if (isset($_POST['delete']))
 			$compte= new Account($_POST);
 			$compte->hydrate($_POST);
 			$manager->update($compte);
-		  header("Location: compte.php?id=".$_GET['id']);
+		  header("Location: compte.php");
 
 		}
 
@@ -57,7 +57,7 @@ if (isset($_POST['delete']))
  */
 $accounts = $manager->getList();
 
-var_dump($accounts);
+
 
 
 require 'Views/Account.php';

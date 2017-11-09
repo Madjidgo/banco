@@ -19,19 +19,19 @@ foreach ($accounts as $key => $value) {
       <div class="card-block">
 
         <p class="card-text">name:<?php echo $value->getName(); ?></p>
-        <p class="card-text">solde:<?php echo $value['solde'] ?></p>
+        <p class="card-text">solde:<?php echo $value->getSolde(); ?></p>
 
 
         <div class="row offset-1 ">
 
           <!-- input hidden -->
         <form action="index.php" method="post">
-			     <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
+			     <input type="hidden" name="id" value="<?php echo $value->getId(); ?>">
 			     <button  class="btn btn-primary sup" type="submit" name="delete" value="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
          </form>
 
 
-        <a class="btn btn-danger env" href="Account.php?id=<?php echo $value['id']?> "role="button"><i class="fa fa-plus" aria-hidden="true"></i></a>
+        <a class="btn btn-danger env" href="Account.php?id=<?php echo $value->getId();?> "role="button"><i class="fa fa-plus" aria-hidden="true"></i></a>
       </div>
     </div>
     </div>

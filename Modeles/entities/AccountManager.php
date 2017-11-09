@@ -40,6 +40,10 @@ class AccountManager
   $req->execute();
 
   $accounts = $req->fetchall(PDO::FETCH_ASSOC);
+  foreach ($accounts as $key => $value) {
+    # code...
+    $accounts[$key] = new Account($value);
+  }
   return $accounts;
   }
 
@@ -65,7 +69,7 @@ class AccountManager
  *
  * @param      <type>  $accounts  The accounts
  */
-  public function add($accounts){
+  public function add( $accounts){
 
 
     $req = $this->_db->prepare('INSERT INTO Account(name,solde) VALUES( :name,:solde)');
