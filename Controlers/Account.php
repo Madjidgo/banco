@@ -14,7 +14,7 @@ if(isset($_POST['name']) && isset($_POST['solde']))
 {
 
 	$compte= new Account($_POST);
-	$compte->hydrate($_POST);
+;
 	$manager->add($compte);
 
 	header('Location: index.php');
@@ -42,8 +42,10 @@ if (isset($_POST['delete']))
 		{
 
 			$compte= new Account($_POST);
-			$compte->hydrate($_POST);
+
 			$manager->update($compte);
+			
+
 
 		  header("Location: index.php");
 
