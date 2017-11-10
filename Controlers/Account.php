@@ -66,23 +66,25 @@ if(isset($_POST['submit']) && isset($_POST['ss']))
 	 $manager->update($account);
  }
 }
+ 
 
-if(isset($_POST['transfer'])){
-$id= $_POST['id'];
-$amount= $_POST['amount'];
-$account1 =$manager->get($id);
-$account1->ssMoney($amount);
-$manager->update($account1);
-
-
-
-$idend= $_POST['idend'];
-$account2 =$manager->get($idend);
-$account2->addMoney($amount);
-$manager->update($account2);
+if(isset($_POST['transfer']))
+	{
+		$id= $_POST['id'];
+			$amount= $_POST['amount'];
+			$account1 =$manager->get($id);
+			$account1->ssMoney($amount);
+			$manager->update($account1);
 
 
-}
+
+			$idend= $_POST['idend'];
+			$account2 =$manager->get($idend);
+			$account2->addMoney($amount);
+			$manager->update($account2);
+
+
+	}
 /**
  * { var_description }
  *

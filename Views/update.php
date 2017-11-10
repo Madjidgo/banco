@@ -12,29 +12,29 @@
 <!-- id -->
 
 <!-- Name -->
- <div class="form-group row">
-     <label for="example-text-input" class="col-2 col-form-label">Name</label>
-      <div class="col-10">
-        <input class="form-control" type="text" name="name" value= '<?php echo $account1->getName(); ?>' required>
-     </div>
- </div>
+               <div class="form-group row">
+                   <label for="example-text-input" class="col-2 col-form-label">Name</label>
+                    <div class="col-10">
+                      <input class="form-control" type="text" name="name" value= '<?php echo $account1->getName(); ?>' required>
+                   </div>
+               </div>
 
 
- <div class="form-group row">
-      <label for="example-text-input" class="col-2 col-form-label">Debit</label>
-        <div class="col-10">
-          <input class="form-control" type="number" name="ss" >
-      </div>
-</div>
+               <div class="form-group row">
+                    <label for="example-text-input" class="col-2 col-form-label">Debit</label>
+                      <div class="col-10">
+                        <input class="form-control" type="number" name="ss" >
+                    </div>
+              </div>
 
 
 
-  <div class="form-group row">
-      <label for="example-text-input" class="col-2 col-form-label">Credit</label>
-          <div class="col-10">
-              <input class="form-control" type="number" name="add" >
-         </div>
-  </div>
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-2 col-form-label">Credit</label>
+                        <div class="col-10">
+                            <input class="form-control" type="number" name="add" >
+                       </div>
+                </div>
 
 
 
