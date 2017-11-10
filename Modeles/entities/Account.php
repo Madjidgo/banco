@@ -40,7 +40,7 @@ $this->hydrate($data);
 // fonction pour ajouter de l'argent
 
 public function addMoney($money){
-  $this->money += $money;
+  $this->solde += $money;
 }
 
     /**

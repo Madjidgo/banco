@@ -37,20 +37,12 @@ if (isset($_POST['delete']))
 
  	{
 
-		if(isset($_POST['name']) && isset($_POST['solde']) && isset($_POST['id']))
+		var_dump($_POST);
+		//Récupérer l'objet par son ID
 
-		{
+		//Appeler la méthode addmoney et lui passer en argument $_POST["add"]
 
-			$compte= new Account($_POST);
-
-			$manager->update($compte);
-			
-
-
-		  header("Location: index.php");
-
-		}
-
+		// Updater l'objet en base de données grace au manager
 }
 
 /**

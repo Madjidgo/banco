@@ -27,6 +27,15 @@
      </div>
  </div>
 
+ <?php if (method_exists($account, 'addMoney')) {
+                  ?>
+                              <div class="form-group row">
+                   <label for="example-text-input" class="col-2 col-form-label">Credit</label>
+                   <div class="col-10">
+                     <input class="form-control" type="number" name="add" value= '<?php echo $account->addMoney($money) ?>'>
+                   </div>
+                 </div>
+            <?php } ?>
 
                <input type="hidden" name="id" value='<?php echo $account->getId(); ?>'>
                  <input class="btn btn-primary env" type="submit" name="submit" value="Envoyer" >

@@ -23,9 +23,17 @@
     <body>
         <header>
         <section class="container">
+
           <div class="jumbotron">
-            <h3 class="display-3">Bank</h3>
+              <div class="row">
+
+              <img class="img-fluid" src="bank.jpeg" alt="logo"></img>
+              <h3 class="display-3 ">Bank</h3>
+
+          </div>
             <p class="lead">M.G</p>
+
+
             <hr class="my-4">
 
 
