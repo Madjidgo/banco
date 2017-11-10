@@ -4,7 +4,7 @@ declare(strict_types=1);
   class Account{
                         protected $id;
                         protected $name;
-                        protected $olde;
+                        protected $solde;
 
 
 
@@ -37,10 +37,15 @@ $this->hydrate($data);
 
 
 
-// fonction pour ajouter de l'argent
+// methode pour ajouter de l'argent
 
 public function addMoney($money){
   $this->solde += $money;
+}
+
+//  methode retirer de l'argent
+public function ssMoney($money){
+  $this->solde -= $money;
 }
 
     /**

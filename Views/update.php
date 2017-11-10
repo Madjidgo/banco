@@ -14,30 +14,32 @@
 <!-- Name -->
  <div class="form-group row">
      <label for="example-text-input" class="col-2 col-form-label">Name</label>
-     <div class="col-10">
-     <input class="form-control" type="text" name="name" value= '<?php echo $account->getName(); ?>' required>
+      <div class="col-10">
+        <input class="form-control" type="text" name="name" value= '<?php echo $account1->getName(); ?>' required>
      </div>
  </div>
 
-<!-- Solde -->
+
  <div class="form-group row">
-     <label for="example-text-input" class="col-2 col-form-label">Solde</label>
-     <div class="col-10">
-     <input class="form-control" type="number" name="solde" value= '<?php echo $account->getSolde(); ?>' required>
-     </div>
- </div>
+      <label for="example-text-input" class="col-2 col-form-label">Debit</label>
+        <div class="col-10">
+          <input class="form-control" type="number" name="ss" >
+      </div>
+</div>
 
- <?php if (method_exists($account, 'addMoney')) {
-                  ?>
-                              <div class="form-group row">
-                   <label for="example-text-input" class="col-2 col-form-label">Credit</label>
-                   <div class="col-10">
-                     <input class="form-control" type="number" name="add" value= '<?php echo $account->addMoney($money) ?>'>
-                   </div>
-                 </div>
-            <?php } ?>
 
-               <input type="hidden" name="id" value='<?php echo $account->getId(); ?>'>
+
+  <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Credit</label>
+          <div class="col-10">
+              <input class="form-control" type="number" name="add" >
+         </div>
+  </div>
+
+
+
+
+               <input type="hidden" name="id" value='<?php echo $account1->getId(); ?>'>
                  <input class="btn btn-primary env" type="submit" name="submit" value="Envoyer" >
 
                </div>

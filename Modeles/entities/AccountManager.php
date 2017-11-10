@@ -40,7 +40,7 @@ class AccountManager
   $req->execute();
 
   $accounts = $req->fetchall(PDO::FETCH_ASSOC);
-  
+
   foreach ($accounts as $key => $value) {
     # code...
     $accounts[$key] = new Account($value);
