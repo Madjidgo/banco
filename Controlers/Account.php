@@ -71,22 +71,35 @@ if(isset($_POST['submit']) && isset($_POST['ss']))
 /**
  * { item_description }
  */
-if(isset($_POST['transfer']))
+if(isset($_POST['transfer']) && isset($_POST['amount']) && isset($_POST['idend']))
 	{
-		$id= $_POST['id'];
+
+			/**
+			 * [$id description]
+			 * @var [type]
+			 */
+			
+			if($_POST['amount']<0){
+					echo 'LA maison ne fait pas de credit';
+			}
+			else{
+			$id= $_POST['id'];
 			$amount= $_POST['amount'];
 			$account1 =$manager->get($id);
 			$account1->ssMoney($amount);
 			$manager->update($account1);
 
 
-
+			/**
+			 * [$idend description]
+			 * @var [type]
+			 */
 			$idend= $_POST['idend'];
 			$account2 =$manager->get($idend);
 			$account2->addMoney($amount);
 			$manager->update($account2);
 
-
+		}
 	}
 /**
  * { var_description }

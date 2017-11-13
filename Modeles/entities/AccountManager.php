@@ -76,7 +76,7 @@ class AccountManager
     $req = $this->_db->prepare('INSERT INTO Account(name,solde) VALUES( :name,:solde)');
 
 
-    $req->bindValue(':name', $accounts->getName(), PDO::PARAM_STR));
+    $req->bindValue(':name', $accounts->getName());
     $req->bindValue(':solde', $accounts->getSolde(), PDO::PARAM_INT);
 
   $req->execute();

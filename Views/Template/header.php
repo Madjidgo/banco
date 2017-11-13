@@ -21,6 +21,9 @@
 
 
     <body>
+      <!-- /**
+       * header
+       */ -->
         <header>
         <section class="container">
 
@@ -28,7 +31,7 @@
               <div class="row">
 
               <img class="img-fluid" src="bank.jpeg" alt="logo"></img>
-              <h3 class="display-3 ">Bank</h3>
+              <h3 class="display-3 center">Bank</h3>
 
           </div>
             <p class="lead">M.G</p>
@@ -36,17 +39,17 @@
 
             <hr class="my-4">
 
-      /**
+      <!-- /**
        * button create 
        * 
-       */
+       */ -->
       <button type="button" class="btn btn-danger env" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create</button>
 
-
+<!-- 
       /**
-       * Modal
+       * Modal 
        * 
-       */
+       */ -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">

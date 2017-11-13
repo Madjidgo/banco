@@ -17,36 +17,36 @@ foreach ($accounts as $key => $value) {
   <div class="col-sm-4 my-2 ">
     <div class="card">
       <div class="card-block">
-        <p class="card-text">name:<?php echo strip_tags( $value->getName()); ?></p>
-        <p class="card-text">solde:<?php echo strip_tags($value->getSolde()); ?></p>
+        <p class="card-text">name:<?php echo htmlentities($value->getName()); ?></p>
+        <p class="card-text">solde:<?php echo htmlentities($value->getSolde()); ?></p>
       <div class="row offset-1 ">
-
 
 
 
          <form action="index.php" method="post">
             <input type="hidden" name="id" value="<?php echo $value->getId(); ?>">
-           <div class="form-group row">
-               <label for="amount" class="col-2 col-form-label">Amount</label>
+
+           <div class=" col xs-12 col md-12 col-12 row">
+               <label for="amount" ">Amount</label>
                    <div class="col-10">
                        <input class="form-control" type="number" name="amount" >
                   </div>
            </div>
 
 
-           <select  class="idend" name="idend">
+           <select class="form-group class="idend" name="idend">
              <?php foreach ($accounts as $acct => $value1)
              {
                if($value1->getId() != $value->getId()){
-              ?>
-                  <option value="<?php echo $value1->getId(); ?>">Name:<?php echo strip_tags( $value1->getName()); ?></option>
+              ?>(
+                  <option value="<?php echo strip_tags($value1->getId()); ?>"><?php echo strip_tags($value1->getName()); ?></option>
                   <?php
                 }
               }
                 ?>
             </select>
 
-           <button  class="btn btn-primary sup" type="submit" name="transfer">transfer</button>
+           <button  class="btn btn-primary sup " type="submit" name="transfer">transfer</button>
           </form>
 
           <!-- input hidden -->
