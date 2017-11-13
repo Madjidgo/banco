@@ -7,5 +7,6 @@ $manager = new AccountManager($db);
 
 $account1 =$manager->get($_GET['id']);
 
+
 require 'Views/update.php';
 require 'Views/Template/footer.php';

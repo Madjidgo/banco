@@ -9,7 +9,7 @@
           </div>
 
             <form class="form-register" method="post" name="" action="index.php" >
-<!-- id -->
+
 
 <!-- Name -->
                <div class="form-group row">
