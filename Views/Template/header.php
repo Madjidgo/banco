@@ -36,9 +36,17 @@
 
             <hr class="my-4">
 
-
+      /**
+       * button create 
+       * 
+       */
       <button type="button" class="btn btn-danger env" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create</button>
 
+
+      /**
+       * Modal
+       * 
+       */
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -54,12 +62,12 @@
 
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label">Name:</label>
-                  <input type="text" name="name"  class="form-control" id="recipient-name">
+                  <input type="text" name="name"  class="form-control" id="recipient-name"  required placeholder="Name">
                 </div>
 
                 <div class="form-group">
                   <label for="message-text1"  class="col-form-label">Solde:</label>
-                    <input type="number" name="solde" class="form-control" id="message-text1">
+                    <input type="number" name="solde" class="form-control" id="message-text1" required placeholder="Solde">
                 </div>
 
 

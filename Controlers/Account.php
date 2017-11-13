@@ -10,15 +10,16 @@ $manager = new AccountManager($db);
  */
 if(isset($_POST["submitAdd"])){
 
-if(isset($_POST['name']) && isset($_POST['solde']))
+if( isset(($_POST['name'])) && isset($_POST['solde']))
 {
 
 	$compte= new Account($_POST);
 
-	$manager->add($compte);
+	$r= $manager->add($compte);
 
 	header('Location: index.php');
 }
+
 }
 /**
  * { item_description }
@@ -43,7 +44,7 @@ if (isset($_POST['delete']))
 
 		//Appeler la méthode addmoney et lui passer en argument $_POST["add"]
 		$account->addMoney($_POST['add']);
-			var_dump($account);
+
 		// Updater l'objet en base de données grace au manager
 		$manager->update($account);
 }
@@ -61,13 +62,15 @@ if(isset($_POST['submit']) && isset($_POST['ss']))
 
 	 //Appeler la méthode addmoney et lui passer en argument $_POST["ss]
 	 $account->ssMoney($_POST['ss']);
-		 var_dump($account);
+		
 	 // Updater l'objet en base de données grace au manager
 	 $manager->update($account);
  }
 }
- 
 
+/**
+ * { item_description }
+ */
 if(isset($_POST['transfer']))
 	{
 		$id= $_POST['id'];

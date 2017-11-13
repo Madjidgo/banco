@@ -8,20 +8,25 @@
             <div class="divider"></div>
           </div>
 
-            <form class="form-register" method="post" name="" action="index.php" >
+
+/**
+ * [class description]
+ * @type {String}
+ */
+            <form class="form-register" method="post" action="index.php" >
 
 
 <!-- Name -->
                <div class="form-group row">
                    <label for="example-text-input" class="col-2 col-form-label">Name</label>
                     <div class="col-10">
-                      <input class="form-control" type="text" name="name" value= '<?php echo $account1->getName(); ?>' required>
+                      <input class="form-control" type="text" name="name" value= '<?php echo strip_tags($account1->getName()); ?>' required>
                    </div>
                </div>
 
 
                <div class="form-group row">
-                    <label for="example-text-input" class="col-2 col-form-label">Debit</label>
+                    <label for="example-text-input" class="col-2 col-form-label">Debit</label >
                       <div class="col-10">
                         <input class="form-control" type="number" name="ss" >
                     </div>

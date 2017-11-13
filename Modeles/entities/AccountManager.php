@@ -42,7 +42,7 @@ class AccountManager
   $accounts = $req->fetchall(PDO::FETCH_ASSOC);
 
   foreach ($accounts as $key => $value) {
-    # code...
+    
     $accounts[$key] = new Account($value);
   }
   return $accounts;
@@ -76,7 +76,7 @@ class AccountManager
     $req = $this->_db->prepare('INSERT INTO Account(name,solde) VALUES( :name,:solde)');
 
 
-    $req->bindValue(':name', $accounts->getName());
+    $req->bindValue(':name', $accounts->getName(), PDO::PARAM_STR));
     $req->bindValue(':solde', $accounts->getSolde(), PDO::PARAM_INT);
 
   $req->execute();
@@ -93,7 +93,7 @@ class AccountManager
 
 
 
-    $req->bindValue(':name', $accounts->getName());
+    $req->bindValue(':name', $accounts->getName(),PDO::PARAM_STR);
     $req->bindValue(':solde', $accounts->getSolde(), PDO::PARAM_INT);
     $req->bindValue(':id', $accounts->getId(),PDO::PARAM_INT);
 

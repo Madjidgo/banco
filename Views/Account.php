@@ -17,8 +17,8 @@ foreach ($accounts as $key => $value) {
   <div class="col-sm-4 my-2 ">
     <div class="card">
       <div class="card-block">
-        <p class="card-text">name:<?php echo $value->getName(); ?></p>
-        <p class="card-text">solde:<?php echo $value->getSolde(); ?></p>
+        <p class="card-text">name:<?php echo strip_tags( $value->getName()); ?></p>
+        <p class="card-text">solde:<?php echo strip_tags($value->getSolde()); ?></p>
       <div class="row offset-1 ">
 
 
@@ -39,7 +39,7 @@ foreach ($accounts as $key => $value) {
              {
                if($value1->getId() != $value->getId()){
               ?>
-                  <option value="<?php echo $value1->getId(); ?>">Name:<?php echo $value1->getName(); ?></option>
+                  <option value="<?php echo $value1->getId(); ?>">Name:<?php echo strip_tags( $value1->getName()); ?></option>
                   <?php
                 }
               }
