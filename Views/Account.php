@@ -14,7 +14,7 @@ foreach ($accounts as $key => $value) {
 
  ?>
   <!-- cards -->
-  <div class="col-sm-4 my-2 ">
+  <div class="col-lg-4 col-sm-6 my-2 ">
     <div class="card">
       <div class="card-block">
         <p class="card-text">name:<?php echo htmlentities($value->getName()); ?></p>

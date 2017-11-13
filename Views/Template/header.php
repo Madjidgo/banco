@@ -25,11 +25,11 @@
        * header
        */ -->
         <header>
-        <section class="container">
+        <!-- <section class="container"> -->
 
-          <div class="jumbotron">
-              <div class="row">
-
+          <section class="jumbotron container">
+              
+                <div class="row">
               <img class="img-fluid" src="bank.jpeg" alt="logo"></img>
               <h3 class="display-3 center">Bank</h3>
 
